@@ -1,22 +1,106 @@
-.App {
-  text-align: center;
+/* rgb(73,67,114) */
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+  font-family: Lato;
 }
 
-.App-logo {
-  height: 40vmin;
+ul {
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 10px 20px;
+}
+
+.active-test h1, .nav-item, .logs caption {
+  font-size: 16px;
+  font-family: Menlo;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: stretch;
+  height: 100%;
 }
 
-.App-link {
-  color: #09d3ac;
+.active-test {
+  text-align: center;
+  flex: 2;
+  background: #fff;
+}
+
+.active-test h1 {
+  background: #eaeaea;
+  margin: 0;
+  padding: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.navigation {
+  padding: 20px 0;
+  text-align: center;
+  background: #211e2f;
+  flex: .7;
+}
+
+.nav-item {
+  display: table;
+  background: transparent;
+  color: #fff;
+  border: none;
+  margin: 30px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-item.active {
+  box-shadow: 0px 3px 0px 0px #211e2f, 0px 6px 0px 0px rgb(235, 94, 127);
+}
+
+.logs {
+  flex: 1;
+  height: 100%;
+  background: #eeebfe;
+  color: #211e2f;
+  font-size: 1.3em;
+}
+
+.logs table {
+  width: 100%;
+  line-height: 2.5;
+  border-spacing: 0;
+}
+
+.logs caption {
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.logs tr {
+  background: transparent;
+  animation: Render 250ms ease-in-out alternate 2;
+}
+
+.logs td:first-child {
+  width: 80%;
+  padding: 20px 50px;
+}
+
+.logs td:last-child {
+  width: 20%;
+}
+
+@keyframes Render {
+  from {
+    background: transparent;
+  }
+  to {
+    background: rgb(235, 94, 127);
+  }
 }
