@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState, useEffect } from "react";
+import React, { memo, useCallback, useState } from "react";
 
 const ChildMemo = memo(function Child({ updateIncrement }) {
   return (

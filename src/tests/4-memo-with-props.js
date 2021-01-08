@@ -1,8 +1,8 @@
 import React, { memo, useState } from "react";
 
 const MemoizedChild = memo(function Child(props) {
-  return <h2>I am a child component with a dynamic prop! Will I re-render?</h2>
-})
+  return <h2>I am a child component with a dynamic prop! Will I re-render? </h2>
+});
 
 function Parent() {
   const [increment, setIncrement] = useState(0);

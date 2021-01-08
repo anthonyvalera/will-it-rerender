@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Child(props) {
+function Child() {
   return <h2>I am a child component! Will I re-render?</h2>
 }
 
